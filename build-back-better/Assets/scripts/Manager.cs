@@ -8,9 +8,12 @@ public class Manager : MonoBehaviour
     //Manager Instance
     public static Manager ManagerInstance;
 
+    public Object workerObject1;
+    public Object workerObject2;
+
     //Declare Gameplay Variables
     public float nutrients = 0.0f, workersGather = 0.01f, pointerGather = 1.0f;
-    public int workers = 0, workersUpgrade = 0, pointerUpgrade = 0, rootsUpgrade = 0, workerNutrients = 100, pointerNeutrients = 100, rootsNeutrients = 1000;
+    public int workers = 0, workersUpgrade = 0, pointerUpgrade = 0, rootsUpgrade = 0, workerNutrients = 100, pointerNeutrients = 100, rootsNeutrients = 1000, getRandom = 0;
 
     //Declare sound effect Variables
     public AudioSource upgradeSoundWorkers, upgradeSoundPointer, upgradeSoundRoots, clickSound;
@@ -75,6 +78,20 @@ public class Manager : MonoBehaviour
             workersGather += workersGather;
             workerNutrients *= 2;
             nutrients = 0.0f;
+
+            for (int i = 0; i < workersUpgrade * 2; i++)
+            {
+                getRandom = Random.Range(0, 1);
+
+                if (getRandom == 0)
+                {
+                    Instantiate(workerObject1);
+                }
+                else
+                {
+                    Instantiate(workerObject2);
+                }
+            }
         }
     }
 

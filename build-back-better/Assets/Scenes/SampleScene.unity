@@ -167,6 +167,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22f05e9abc9ef4ac09ac9aec6239cb4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  workerObject1: {fileID: 996479345869101832, guid: 8598b47c5c317450f92eb0f4651455d9, type: 3}
+  workerObject2: {fileID: 3680052759425502778, guid: 26a22598048454a0f874c2719f12f759, type: 3}
   nutrients: 0
   workersGather: 0.01
   pointerGather: 1
@@ -177,6 +179,7 @@ MonoBehaviour:
   workerNutrients: 100
   pointerNeutrients: 100
   rootsNeutrients: 1000
+  getRandom: 0
   upgradeSoundWorkers: {fileID: 0}
   upgradeSoundPointer: {fileID: 0}
   upgradeSoundRoots: {fileID: 0}
