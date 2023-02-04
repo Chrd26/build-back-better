@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Manager : MonoBehaviour
 {
@@ -10,6 +11,12 @@ public class Manager : MonoBehaviour
     //Declare Gameplay Variables
     public float nutrients = 0.0f, workersGather = 0.01f, pointerGather = 1.0f;
     public int workers = 0, workersUpgrade = 0, pointerUpgrade = 0, rootsUpgrade = 0, workerNutrients = 100, pointerNeutrients = 100, rootsNeutrients = 1000;
+
+    //Declare sound effect Variables
+    public AudioSource upgradeSoundWorkers, upgradeSoundPointer, upgradeSoundRoots, clickSound;
+
+    //Music
+    public AudioSource music;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +31,12 @@ public class Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        WorkerNutrientsManager();  
+        WorkerNutrientsManager();
+
+        if (rootsUpgrade == 10)
+        {
+            SceneManager.LoadScene("End Screen", LoadSceneMode.Single);
+        }
     }
 
     public void WorkerNutrientsManager()
