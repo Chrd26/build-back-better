@@ -13,13 +13,10 @@ public class Manager : MonoBehaviour
 
     //Declare Gameplay Variables
     public float nutrients = 0.0f, workersGather = 0.01f, pointerGather = 1.0f;
-    public int workers = 0, workersUpgrade = 0, pointerUpgrade = 0, rootsUpgrade = 0, workerNutrients = 100, pointerNeutrients = 100, rootsNeutrients = 1000, getRandom = 0;
+    public int workers = 0, workersUpgrade = 0, pointerUpgrade = 0, rootsUpgrade = 0, workerNutrients = 100, pointerNeutrients = 100, rootsNeutrients = 500, getRandom = 0;
 
     //Declare sound effect Variables
     public AudioSource upgradeSoundWorkers, upgradeSoundPointer, upgradeSoundRoots, clickSound;
-
-    //Music
-    public AudioSource music;
 
     // Start is called before the first frame update
     void Start()
@@ -74,14 +71,17 @@ public class Manager : MonoBehaviour
     {
         if (nutrients >= workerNutrients)
         {
+            nutrients -= workerNutrients;
             workersUpgrade++;
             workersGather += workersGather;
-            workerNutrients *= 2;
-            nutrients = 0.0f;
+            workerNutrients += 200; 
+            upgradeSoundWorkers.pitch = Random.Range(0.9f, 1.1f);
+            upgradeSoundWorkers.Play();
 
             for (int i = 0; i < workersUpgrade * 2; i++)
             {
-                getRandom = Random.Range(0, 1);
+                getRandom = Random.Range(0, 2);
+                Debug.Log(getRandom);
 
                 if (getRandom == 0)
                 {
@@ -99,10 +99,12 @@ public class Manager : MonoBehaviour
     {
         if (nutrients >= pointerNeutrients)
         {
+            nutrients -= pointerNeutrients;
             pointerUpgrade++;
             pointerGather += 0.1f;
-            pointerNeutrients *= 2;
-            nutrients = 0.0f;
+            pointerNeutrients += 200;
+            upgradeSoundPointer.pitch = Random.Range(0.9f, 1.1f);
+            upgradeSoundPointer.Play();
         }
     }
 
@@ -110,9 +112,11 @@ public class Manager : MonoBehaviour
     {
         if (nutrients >= rootsNeutrients)
         {
+            nutrients -= rootsNeutrients;
             rootsUpgrade++;
-            rootsNeutrients *= 2;
-            nutrients = 0.0f;
+            rootsNeutrients += 500;
+            upgradeSoundRoots.pitch = Random.Range(0.9f, 1.1f);
+            upgradeSoundRoots.Play();
         }
     }
 }
