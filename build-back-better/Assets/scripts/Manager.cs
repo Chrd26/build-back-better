@@ -86,7 +86,7 @@ public class Manager : MonoBehaviour
             for (int i = 0; i < workersUpgrade * 2; i++)
             {
                 getRandom = Random.Range(0, 2);
-                Debug.Log(getRandom);
+                //Debug.Log(getRandom);
 
                 if (getRandom == 0)
                 {
