@@ -215,7 +215,7 @@ MonoBehaviour:
   rootsUpgrade: 0
   workerNutrients: 100
   pointerNeutrients: 100
-  rootsNeutrients: 1000
+  rootsNeutrients: 500
   getRandom: 0
   upgradeSoundWorkers: {fileID: 1853909828}
   upgradeSoundPointer: {fileID: 448513401}
@@ -613,7 +613,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -6985364429277014977, guid: b7d3cc260b3bd4196a3bfda647dd5cfd, type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b8d1c077d0b884d1c9a6032420802d05, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3784,7 +3784,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 1244047318976439586, guid: b7d3cc260b3bd4196a3bfda647dd5cfd, type: 2}
   m_audioClip: {fileID: 8300000, guid: 3d840c317e7644798b260b6728684bcb, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

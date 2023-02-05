@@ -41,6 +41,7 @@ public class Manager : MonoBehaviour
 
     public void WorkerNutrientsManager()
     {
+
         if (workersUpgrade > 0)
         {
             nutrients += workersGather + workers;
@@ -56,6 +57,10 @@ public class Manager : MonoBehaviour
 
     public void PointerNutrientsManager()
     {
+	clickSound.pitch = Random.Range(0.9f, 1.1f);
+	clickSound.Play();
+
+
         if (pointerUpgrade > 0)
         {
             nutrients += pointerGather + pointerUpgrade;
@@ -101,7 +106,7 @@ public class Manager : MonoBehaviour
         {
             nutrients -= pointerNeutrients;
             pointerUpgrade++;
-            pointerGather += 0.1f;
+            pointerGather += 2.0f;
             pointerNeutrients += 200;
             upgradeSoundPointer.pitch = Random.Range(0.9f, 1.1f);
             upgradeSoundPointer.Play();
