@@ -18,11 +18,12 @@ public class Manager : MonoBehaviour
     //Declare sound effect Variables
     public AudioSource upgradeSoundWorkers, upgradeSoundPointer, upgradeSoundRoots, clickSound;
 
+    /*
     private void Awake()
     {
         Screen.SetResolution(1920, 1080, FullScreenMode.Windowed);
     }
-
+    */
     // Start is called before the first frame update
     void Start()
     {
