@@ -32,9 +32,5 @@ Game has no intense visual effects or sounds, or lets players adjust intensity
  
  It’s 2023. The number 23 represents change, progress, innovation, new beginnings, revolution, and transformation. Integrate one or more of these themes into your game.
  
- 
-
-
-
-
-
+ ![Hand-drawn-Material](/Game-Pictures/IMG_0986.JPG "Hand-Drawn graphics for the game")
+ ![Game Screenshot in unity Engine](/Game-Pictures/hvBV3a.png "Made in Unity Engine")
