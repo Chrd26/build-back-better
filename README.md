@@ -34,3 +34,4 @@ Game has no intense visual effects or sounds, or lets players adjust intensity
  
  ![Hand-drawn-Material](/Game-Pictures/IMG_0986.JPG "Hand-Drawn graphics for the game")
  ![Game Screenshot in unity Engine](/Game-Pictures/hvBV3a.png "Made in Unity Engine")
+ ![Gameplay GIF](/Game-Pictures/BBB-2.gif "Gameplay")
